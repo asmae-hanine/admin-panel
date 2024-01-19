@@ -35,7 +35,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="../home-admin.php">
+                        <a class="nav-link" href="home-admin.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
@@ -100,7 +100,8 @@
                                     <tr>
                                         <td><?php echo $row["code"] ?></td>
                                         <td><?php echo $row["titre"] ?></td>
-                                        <td><img src='../photos/<?php echo $row["photo"] ?>' width="30px"></td>
+                                        <td><img src='photos/<?php echo $row["photo"] ?>' width="30px"></td>
+
                                         <td><?php echo $row["designation"] ?></td>
                                         <td><?php echo $row["categorie"] ?></td>
                                         <td><?php echo $row["prix"] ?></td>

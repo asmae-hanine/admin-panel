@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    include_once './admin/actions/dbConnexion.php';
+    include_once 'dbConnexion.php';
 
     $req = "INSERT INTO produit (titre,code,photo,designation,categorie,prix)
           VALUES ('$titreProduct','$codeProduct','$lienphoto','$designation','$category','$prix')";
