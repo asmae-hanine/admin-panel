@@ -70,40 +70,38 @@
                             All the products
                         </div>
                         <div class="card-body">
-                            <table id="datatablesSimple">
+                            <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Code</th>
-                                        <th>Titre</th>
-                                        <th>Photo</th>
-                                        <th>Designation</th>
-                                        <th>Categorie</th>
-                                        <th>Prix</th>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">title</th>
+                                        <th scope="col">photo</th>
+                                        <th scope="col">Designation</th>
+                                        <th scope="col">Categorie</th>
+                                        <th scope="col">Prix</th>
+                                        <th scope="col">Modifications</th>
                                     </tr>
                                 </thead>
-                                <!-- display all the product -->
-                                <?php
-                                while ($row = mysqli_fetch_array($result)) {
-                                ?>
-                                    <tr>
-                                        <td><?php echo $row["code"] ?></td>
-                                        <td><?php echo $row["titre"] ?></td>
-                                        <td><img src='photos/<?php echo $row["photo"] ?>' width="30px"></td>
+                                <tbody>
+                                    <?php
+                                    while ($row = mysqli_fetch_array($result)) {
+                                    ?>
+                                        <tr>
+                                            <td scope='row'><?php echo $row["code"] ?></td>
+                                            <td><?php echo $row["titre"] ?></td>
+                                            <td><img src='photos/<?php echo $row["photo"] ?>' width="30px"></td>
 
-                                        <td><?php echo $row["designation"] ?></td>
-                                        <td><?php echo $row["categorie"] ?></td>
-                                        <td><?php echo $row["prix"] ?></td>
-                                    </tr>
-
-
-                                <?php
-                                }
-
-                                ?>
-
-                                <tfoot>
-                                </tfoot>
-
+                                            <td><?php echo $row["designation"] ?></td>
+                                            <td><?php echo $row["categorie"] ?></td>
+                                            <td><?php echo $row["prix"] ?></td>
+                                            <td>
+                                                <button class="btn btn-success" href='actions/modify.php?id=<?php echo $row['id'] ?>'>modify</button>
+                                                <button class="btn btn-danger" href='actions/delete.php?id=<?php echo $row['id'] ?>'>delete</button>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
 
