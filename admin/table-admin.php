@@ -93,10 +93,11 @@
 
                                             <td><?php echo $row["designation"] ?></td>
                                             <td><?php echo $row["categorie"] ?></td>
-                                            <td><?php echo $row["prix"] ?></td>
+                                            <td><?php echo $row["prix"] ?> $</td>
                                             <td>
-                                                <button class="btn btn-success" href='actions/modify.php?id=<?php echo $row['id'] ?>'>modify</button>
-                                                <button class="btn btn-danger" href='actions/delete.php?id=<?php echo $row['id'] ?>'>delete</button>
+                                                <a class="btn btn-primary" href="actions/add.php">Add</a>
+                                                <a class="btn btn-success" href="actions/modify.php?id=<?php echo $row["id"] ?>">Modify</a>
+                                                <a class="btn btn-danger" href='actions/delete.php?id=<?php echo $row['id'] ?>'>Delete</a>
                                             </td>
                                         </tr>
                                     <?php
