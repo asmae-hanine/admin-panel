@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +22,6 @@
 
     <?php
     include_once './actions/dbConnexion.php';
-
     // select the element from the db 
 
     $sql = "SELECT * FROM produit";
@@ -51,7 +53,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    <?php echo $_SESSION['username'] ?>
                 </div>
             </nav>
         </div>

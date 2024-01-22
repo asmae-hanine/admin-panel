@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="en">
 <!-- head -->
 
@@ -86,7 +89,7 @@ include('../imports/dashboard-header.php');
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    <?php echo $_SESSION['username'] ?>
                 </div>
             </nav>
         </div>
